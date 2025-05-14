@@ -1,0 +1,102 @@
+utiliza  union-find
+find representnte de v, se forem diferentes, union
+
+interessante representar o grafo como vetor de arestas com peso, ordena ele
+
+Kruskal(G =(V,E), w){
+    T = {}
+    for (v in V){
+        MAKE-SET(v)
+    }
+    for((u,v) in E){ //ordem de  peso w(u,v)
+        if (FIND(u) != FIND(v)){
+            T= T U {u,v}
+            UNION(FIND(u), FIND(v))
+        }
+        
+    }
+    return T
+}
+
+
+primeira implementação do union-find  O(n)
+
+Union-Find{
+
+    MAKE-SET(x){
+        pai[x] = x
+    }
+
+    FIND(x){
+        r = x
+        while(pai[r] != r){
+            r = pai[r]
+        }
+        return r
+    }
+
+    UNIOn(x, y){
+        pai[y] = x
+    }
+}
+
+segunda implementacao do union-find com heuristica dos tamanhos O(logN)
+Union-find{
+
+    MAKE-SET(x){
+        pai[x] = x
+        rank[x] = 0
+    }
+
+    FIND(x){ fica  igual ao anterior
+        r = x
+        while(pai[r] != r){
+            r = pai[r]
+        }
+        return r
+    }
+
+    UNION(x, y){
+       if(rank[x] >= rank[y]){
+        pai[y] = x
+        if(rank[x] == rank[y]){
+            rank[x]++;
+        }
+       }
+       else{
+        pai[x] = y
+       }
+    }
+}
+
+terceira implementacao do union-find usando heuristica de compressao de  caminhos 
+O(log^N)
+
+log^N é o número de vezes que é preciso aplicar o log até atingir um número menor ou igual a 1
+
+Union-Find{
+
+    MAKE-SET(x){
+        pai[x] = x
+        rank[x] = 0
+    }
+
+    FIND(x){
+        if (pai[x] != x){
+            pai[x] = FIND(pai[x])
+        }
+        return pai[x]
+    }
+
+    UNION(x, y){
+       if(rank[x] >= rank[y]){
+        pai[y] = x
+        if(rank[x] == rank[y]){
+            rank[x]++;
+        }
+       }
+       else{
+        pai[x] = y
+       }
+    }
+}

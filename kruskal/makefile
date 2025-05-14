@@ -1,3 +1,3 @@
 run:
-	g++ -o a prim.cpp
-	./a < grafos.dat
+	g++ -o a kruskal.cpp
+	./a < entrada.dat
