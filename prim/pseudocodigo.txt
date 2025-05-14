@@ -1,0 +1,27 @@
+prim(G = (v,e), w, v0){
+    for(u in V){
+        custo[u] = infinito
+        prev[u] = -1
+
+        custo[v0] = 0;
+
+        M = fila-prioridade-min(V, custos)
+
+        while(!M.empty()){
+            v = M.first(), faz o pop tbm
+
+            for (z in vizinhos(v)){
+                if(custo[z] > w(v,z)){
+                    custo[z]= w(v,z)
+                    prev[z] = v
+                    M.increase-priority(z, custo[z]);
+                }
+            }
+        }
+    }
+}
+
+reconstroi a árvore através do prev
+O(m *Log n)
+
+prim é mais rapido que kruskal, se as arestas nao estiverem ordenadas
