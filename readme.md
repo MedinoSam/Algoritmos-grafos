@@ -10,11 +10,12 @@ Este repositório contém implementações dos principais algoritmos de grafos e
 
 ## 🧠 Sobre
 
-Estas implementações são importantes para reforçar o aprendizado acerca dos conteúdos abordados na disciplina Teoria dos Grafos
+Este repositório contém implementações de cinco algoritmos de grafos. Estas implementações são importantes para reforçar o aprendizado acerca dos conteúdos abordados na disciplina Teoria dos Grafos.
 
 ## Alunos
 
 Samuel Medino
+
 Renato Coca
 
 
