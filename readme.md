@@ -8,12 +8,14 @@ Este repositório contém implementações dos principais algoritmos de grafos e
 - [x] Algoritmo de Dijkstra
 - [x] Algoritmo de Kosaraju (componentes fortemente conexos)
 
-🧠 Sobre
+## 🧠 Sobre
 
 Estas implementações são importantes para reforçar o aprendizado acerca dos conteúdos abordados na disciplina Teoria dos Grafos
 
+## Alunos
 
-Cada arquivo `.cpp` é independente e pode ser compilado separadamente.
+Samuel Medino
+Renato Coca
 
 
 ## 🚀 Como executar
@@ -40,6 +42,8 @@ Cada algoritmo aceita parâmetros via linha de comando. Exemplo:
 
 ./kruskal -f instances/grafo.mtx -s
 ./dijkstra -f instances/grafo.mtx -i 1
+make run
+make teste
 ```
 
 ## 📌 Parâmetros suportados (variam por algoritmo)
