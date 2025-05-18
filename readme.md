@@ -40,8 +40,9 @@ Cada algoritmo aceita parâmetros via linha de comando. Exemplo:
 
 ./kruskal -f instances/grafo.mtx -s
 ./dijkstra -f instances/grafo.mtx -i 1
+```
 
-📌 Parâmetros suportados (variam por algoritmo)
+## 📌 Parâmetros suportados (variam por algoritmo)
 
 -h : mostra o help
 
@@ -53,12 +54,12 @@ Cada algoritmo aceita parâmetros via linha de comando. Exemplo:
 
 -i <vértice> : vértice de origem (para Dijkstra, por exemplo)
 
-✅ Requisitos
+## ✅ Requisitos
 
     Compilador C++ (recomenda-se g++)
 
     C++11 ou superior
 
-📫 Contato
+## 📫 Contato
 
 Caso tenha dúvidas ou sugestões, sinta-se à vontade para abrir uma issue ou entrar em contato.
